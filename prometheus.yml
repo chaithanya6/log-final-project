@@ -1,0 +1,27 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
+  - job_name: "loginfopersistor"
+    static_configs:
+      - targets: ["loginfopersistor:8783"]
+  - job_name: "logwarnpersistor"
+    static_configs:
+      - targets: ["logwarnpersistor:8784"]
+  - job_name: "logcollector"
+    static_configs:
+      - targets: ["logcollector:8789"]
+  - job_name: "logdebugpersistor"
+    static_configs:
+      - targets: ["logdebugpersistor:8781"]
+  - job_name: "loganalyser"
+    static_configs:
+      - targets: ["loganalyser:8086"]
+  - job_name: "logerrorpersistor"
+    static_configs:
+      - targets: ["logerrorpersistor:8782"]
